@@ -91,17 +91,17 @@ const MainPage = () => {
 
 
         </canvas>
-        <p className='absolute text-[45px] text-center text-[#003cd6] font-semibold' style={{marginTop: '200px'}}>Добро
+          <p className='absolute text-[35px] sm:text-[45px] leading-none sm:leading-tight text-center text-[#003cd6] font-semibold mt-[160px] sm:mt-[180px] md:mt-[200px]' >Добро
             пожаловать в панель <br/><p
-                className='text-2xl font-[400] mt-5'> {'аккаунта администратора'}</p></p>
-        <svg id='animate' className='absolute' width='34' height='34' style={{marginTop: '290px'}} xmlns="http://www.w3.org/2000/svg"
+                className='text-2xl font-[400] mt-6'> {'аккаунта администратора'}</p></p>
+        <svg id='animate' className='absolute' width='34' height='34' style={{marginTop: '330px'}} xmlns="http://www.w3.org/2000/svg"
              viewBox="0 0 384 512">
             <path fill='white'
                 d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
         </svg>
         <button onClick={() => {
             navigate(`/add-product`)
-        }} style={{marginTop: '350px'}}
+        }} style={{marginTop: '390px'}}
                 className='hover:scale-105 duration-200 transition-all absolute bg-white font-semibold px-5 py-3 text-gray-700 rounded-full border text-lg'>
             Перейти к <span className='text-[#003cd6] font-semibold'>DashBoard</span>
         </button>
