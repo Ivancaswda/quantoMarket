@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+    /* Градиент для бордера */
+    .border-gradient {
+        background-image: linear-gradient(90deg, #00ff00, #ff0000, #ffa500, #0000ff);
+        -webkit-background-clip: padding-box;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* Анимация перелива */
+    .animate-border {
+        background-size: 300% 300%;
+        animation: gradient-move 4s linear infinite;
+    }
+
+    @keyframes gradient-move {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* Белые точки, которые ходят по кругу */
+    .dots {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        pointer-events: none;
+        border: 1px dashed transparent;
+        animation: dots-move 2s linear infinite;
+    }
+
+    .dots::before,
+    .dots::after {
+        content: '';
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background-color: white;
+        border-radius: 50%;
+    }
+
+    .dots::before {
+        animation: dots-orbit 2s linear infinite;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .dots::after {
+        animation: dots-orbit 2s linear infinite;
+        animation-delay: 1s;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @keyframes dots-orbit {
+        0% {
+            transform: translateX(-50%) translateY(-50%) rotate(0deg) translate(50px);
+        }
+        100% {
+            transform: translateX(-50%) translateY(-50%) rotate(360deg) translate(50px);
+        }
+    }
+}
+
+
+#rainbow {
+    animation-name: rainbow;
+    animation-duration: 2s;
+
+}
+@keyframes rainbow {
+    0% {
+        color: white;
+    }
+    20% {
+        color: #2efa00;
+    }
+    40% {
+        color: #0b5aee;
+    }
+    60% {
+        color: #fa00d9;
+    }
+    80% {
+        color: #00ffe1;
+    }
+    100% {
+        color: white;
+    }
+}
+.input-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.input-container input {
+    height: 62px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+
+#stickyh {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 222225;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+.normal-input {
+
+    padding: 10px;
+    margin-top: 50px; /* Чтобы отступ был от верхней части экрана */
+}
+input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.2s ease-in-out;
+    width: 100%;
+    max-width: 1200px;
+
+
+}
+input:focus {
+    border-color: #0222a7; /* Цвет фокуса */
+}
+.search-button {
+
+    background-color: #0332a0; /* Основной цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 0 25px 25px 0;
+    padding: 17px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search-button:hover {
+    background-color: #0335ac;
+}

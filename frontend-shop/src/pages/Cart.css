@@ -1,0 +1,13 @@
+
+.animat {
+    animation: vibrate 0.2s ease-in-out infinite;
+    border: 3px solid red;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(-2px); }
+    25% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}

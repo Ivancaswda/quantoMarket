@@ -1,0 +1,39 @@
+.imagedd {
+    position: relative;
+    background-image: url("https://static.tildacdn.com/tild3936-3661-4130-b733-333563323631/tZFGa9Vdre4-2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;  /* Высота экрана */
+
+}
+#inject {
+    background: rgba(0, 0, 0, 0.86);
+
+    position: absolute;
+
+}
+
+#image-container {
+    position: relative;
+    display: inline-block;
+}
+.imagedd {
+
+}
+
+
+
+#image-container::before {
+    content: "shop";
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: 600;
+    position: absolute;
+    top: -10px;
+    left: 104%;
+    transform: translateX(-50%);
+
+    padding: 5px 10px;
+    border-radius: 5px;
+}
